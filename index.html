@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TXZ Pet Wear — Functional Dog Wear · Wholesale &amp; Dropshipping</title>
+<meta name="description" content="Studio-made functional dog wear for medium & large breeds. Original-design elbow protection sleeves, cooling vests and winter wear. Wholesale & dropshipping supply for overseas retailers.">
+<style>
+:root{
+  --ink:#2b2620; --sub:#6f6558; --line:#e8e1d6; --bg:#faf7f2; --card:#ffffff;
+  --accent:#b4551f; --accent-soft:#f6e8dd; --green:#3d6b4f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{color:var(--accent);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(250,247,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1080px;margin:0 auto;flex-wrap:wrap;gap:8px}
+.logo{font-weight:800;font-size:18px;letter-spacing:.5px}
+.logo span{color:var(--accent)}
+nav a{margin-left:18px;color:var(--sub);font-size:14px;font-weight:600}
+nav a:hover{color:var(--accent)}
+.hero{padding:56px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}}
+.kicker{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:14px}
+h1{font-size:clamp(28px,4.4vw,42px);line-height:1.2;margin-bottom:14px}
+.hero p.lead{color:var(--sub);font-size:17px;margin-bottom:22px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:12px 24px;border-radius:10px;font-size:15px}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);margin-left:10px}
+.hero-img{border-radius:16px;overflow:hidden;box-shadow:0 12px 32px rgba(60,45,25,.14)}
+section{padding:48px 0}
+h2{font-size:clamp(22px,3vw,30px);margin-bottom:8px}
+.sec-sub{color:var(--sub);margin-bottom:28px;max-width:640px}
+.props{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.prop{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.prop h3{font-size:16px;margin-bottom:6px}
+.prop p{font-size:14px;color:var(--sub)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.card .meta{padding:12px 14px}
+.card .name{font-weight:700;font-size:15px}
+.card .zh{color:var(--sub);font-size:12px}
+.tags{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#eee7db;color:var(--sub)}
+.tag.long{background:#e3ecf6;color:#33567c}
+.tag.xmas{background:#e8f1e9;color:var(--green)}
+.tag.cny{background:#f9e5e0;color:#a4402a}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;font-size:14px}
+th,td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left}
+th{background:#f1ebe1;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:var(--sub)}
+tr:last-child td{border-bottom:none}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.note{font-size:13px;color:var(--sub);margin-top:10px}
+.details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px}
+.details-grid figure{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.details-grid img{aspect-ratio:4/3;object-fit:cover}
+.details-grid figcaption{padding:8px 12px;font-size:13px;color:var(--sub)}
+.steps{counter-reset:step;display:grid;gap:14px;max-width:760px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px 18px 64px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+.step h3{font-size:16px;margin-bottom:4px}
+.step p{font-size:14px;color:var(--sub)}
+.callout{background:var(--accent-soft);border:1px solid #ecd3c0;border-radius:14px;padding:18px 22px;margin-top:22px;font-size:14px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer;font-size:15px}
+.faq p{margin-top:8px;font-size:14px;color:var(--sub)}
+.contact-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;max-width:640px;margin:0 auto}
+.contact-box .email{font-size:20px;font-weight:800;margin:10px 0 18px;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-size:13px;text-align:center}
+.coming{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.coming .prop h3{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">TXZ <span>PET WEAR</span></div>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#materials">Materials</a>
+      <a href="#sizing">Sizing</a>
+      <a href="#how">How to Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <span class="kicker">Wholesale · Dropshipping · B2B Supply</span>
+      <h1>Functional dog wear, made in our own studio — built for medium &amp; large breeds</h1>
+      <p class="lead">We design and manufacture original-pattern elbow protection sleeves, cooling vests and winter wear in China, and supply overseas retailers and resellers directly. Listing-ready photos, bilingual spec sheets, flexible small-batch production.</p>
+      <a class="btn" href="#contact">Request Price List</a>
+      <a class="btn ghost" href="#products">View Catalog</a>
+    </div>
+    <div class="hero-img"><img src="assets/hero.jpg" alt="Border collie wearing elbow protection sleeves"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Why source from us</h2>
+  <p class="sec-sub">We are the design studio and the factory — no middle layer between you and the product.</p>
+  <div class="props">
+    <div class="prop"><h3>🎨 Original designs</h3><p>All patterns and prints are self-developed. You won't find these SKUs on mass marketplaces flooding your niche.</p></div>
+    <div class="prop"><h3>🐕 Real large-breed sizing</h3><p>Our size system is built around medium-to-large dogs (7–50 kg) — the segment most overseas suppliers under-serve.</p></div>
+    <div class="prop"><h3>📦 Small-batch friendly</h3><p>Trial orders with mixed designs and sizes are welcome. Two production lines (partner factory + in-house studio) keep lead times short.</p></div>
+    <div class="prop"><h3>🖼️ Listing-ready assets</h3><p>White-background photos, detail shots and worn shots — watermark-free, no Chinese text, ready for your platform listings.</p></div>
+    <div class="prop"><h3>📋 Full documentation</h3><p>Bilingual spec sheets: material composition, size chart, per-pair weights, packaging data — everything platform reviews ask for.</p></div>
+    <div class="prop"><h3>🔁 Stable restock</h3><p>We flag styles that are being phased out before you list them, so you only build inventory on designs we can keep supplying.</p></div>
+  </div>
+</section>
+
+<section id="products">
+  <h2>Elbow Protection Sleeves</h2>
+  <p class="sec-sub">Front-leg elbow sleeves for dogs — padded, breathable, machine-position adjustable. 14 designs (12 short + 2 long), sizes L–3XL covering roughly 7–50 kg. Sold and packed by the pair.</p>
+  <div class="grid">
+    <div class="card"><img src="assets/products/street-leopard.jpg" alt="Street Leopard elbow sleeve"><div class="meta"><div class="name">Street Leopard</div><div class="zh">潮豹 · Chao Bao</div><div class="tags"><span class="tag">Short</span></div></div></div>
+    <div class="card"><img src="assets/products/street-leopard-long.jpg" alt="Street Leopard long elbow sleeve"><div class="meta"><div class="name">Street Leopard</div><div class="zh">潮豹 · Chao Bao</div><div class="tags"><span class="tag long">Long</span></div></div></div>
+    <div class="card"><img src="assets/products/folk-duck.jpg" alt="Folk-Art Duck elbow sleeve"><div class="meta"><div class="name">Folk-Art Duck</div><div class="zh">年画鸭 · Nianhua Ya</div><div class="tags"><span class="tag">Short</span></div></div></div>
+    <div class="card"><img src="assets/products/folk-duck-long.jpg" alt="Folk-Art Duck long elbow sleeve"><div class="meta"><div class="name">Folk-Art Duck</div><div class="zh">年画鸭 · Nianhua Ya</div><div class="tags"><span class="tag long">Long</span></div></div></div>
+    <div class="card"><img src="assets/products/ice-leopard.jpg" alt="Ice Leopard elbow sleeve"><div class="meta"><div class="name">Ice Leopard</div><div class="zh">冷豹力 · Leng Bao Li</div><div class="tags"><span class="tag">Short</span></div></div></div>
+    <div class="card"><img src="assets/products/goose-chase.jpg" alt="Goose Chase elbow sleeve"><div class="meta"><div class="name">Goose Chase</div><div class="zh">抓大鹅 · Zhua Da E</div><div class="tags"><span class="tag">Short</span></div></div></div>
+    <div class="card"><img src="assets/products/lazy-fish.jpg" alt="Lazy Fish elbow sleeve"><div class="meta"><div class="name">Lazy Fish</div><div class="zh">摸个鱼 · Mo Ge Yu</div><div class="tags"><span class="tag">Short</span></div></div></div>
+    <div class="card"><img src="assets/products/happy-bunny.jpg" alt="Happy Bunny elbow sleeve"><div class="meta"><div class="name">Happy Bunny</div><div class="zh">兔个乐 · Tu Ge Le</div><div class="tags"><span class="tag">Short</span></div></div></div>
+    <div class="card"><img src="assets/products/snowman.jpg" alt="Snowman elbow sleeve"><div class="meta"><div class="name">Snowman</div><div class="zh">雪人精 · Xue Ren Jing</div><div class="tags"><span class="tag">Short</span></div></div></div>
+    <div class="card"><img src="assets/products/stocking.jpg" alt="Christmas Stocking elbow sleeve"><div class="meta"><div class="name">Christmas Stocking</div><div class="zh">装满袜 · Zhuang Man Wa</div><div class="tags"><span class="tag">Short</span><span class="tag xmas">Christmas</span></div></div></div>
+    <div class="card"><img src="assets/products/peace-fox.jpg" alt="Peace Fox elbow sleeve"><div class="meta"><div class="name">Peace Fox</div><div class="zh">平安狐 · Ping'an Hu</div><div class="tags"><span class="tag">Short</span><span class="tag xmas">Christmas</span></div></div></div>
+    <div class="card"><img src="assets/products/peace-deer.jpg" alt="Peace Deer elbow sleeve"><div class="meta"><div class="name">Peace Deer</div><div class="zh">平安鹿 · Ping'an Lu</div><div class="tags"><span class="tag">Short</span><span class="tag xmas">Christmas</span></div></div></div>
+    <div class="card"><img src="assets/products/lucky-koi.jpg" alt="Lucky Koi elbow sleeve"><div class="meta"><div class="name">Lucky Koi</div><div class="zh">锦鲤 · Jin Li</div><div class="tags"><span class="tag">Short</span><span class="tag cny">Lunar New Year</span></div></div></div>
+    <div class="card"><img src="assets/products/fortune-deer.jpg" alt="Fortune Deer elbow sleeve"><div class="meta"><div class="name">Fortune Deer</div><div class="zh">福鹿 · Fu Lu</div><div class="tags"><span class="tag">Short</span><span class="tag cny">Lunar New Year</span></div></div></div>
+  </div>
+  <p class="note">Long version runs ~5 cm longer in the sleeve than Short at the same size; limb circumference, cuff opening and weight range are identical. Long starts at XL.</p>
+</section>
+
+<section>
+  <h2>More lines — catalog on request</h2>
+  <p class="sec-sub">Our studio also produces these functional lines. Ask for the current catalog and stock status.</p>
+  <div class="coming">
+    <div class="prop"><h3>Cooling Vests</h3><p>Ice-silk cooling fabric vests for hot-weather walks — lightweight and shipping-friendly.</p></div>
+    <div class="prop"><h3>Ice-Silk Bodysuits</h3><p>Four-leg cooling bodysuits for summer, sized for medium and large breeds.</p></div>
+    <div class="prop"><h3>Winter Elbow Wear &amp; Hoodies</h3><p>Padded winter elbow suits and hoodies for cold-climate markets.</p></div>
+  </div>
+</section>
+
+<section id="materials">
+  <h2>Materials &amp; construction</h2>
+  <p class="sec-sub">Same material stack and construction across all 14 elbow sleeve designs — only the print changes.</p>
+  <div class="tbl-wrap"><table>
+    <tr><th>Part</th><th>Material</th></tr>
+    <tr><td>Main fabric</td><td>100% cotton printed double-knit — Class-A infant-grade, skin-friendly, abrasion-resistant</td></tr>
+    <tr><td>Cuff</td><td>Ribbed cuff, cotton/polyester blend, elastic</td></tr>
+    <tr><td>Shoulder strap</td><td>Elastic strap with 2 mm rubber core, adjustable</td></tr>
+    <tr><td>Closure</td><td>Plastic side-release quick buckle</td></tr>
+    <tr><td>Pad lining</td><td>Dual-layer: cooling-silk skin-contact fabric + 3D sandwich breathable mesh</td></tr>
+    <tr><td>Elbow reinforcement</td><td>Extended outer pad covering the elbow's full range of motion</td></tr>
+  </table></div>
+  <div class="details-grid">
+    <figure><img src="assets/details/pad-lining.jpg" alt="Dual-layer pad lining"><figcaption>Dual-layer pad lining</figcaption></figure>
+    <figure><img src="assets/details/pad-thickness.jpg" alt="Pad thickness measured with calipers"><figcaption>Pad thickness (caliper-measured)</figcaption></figure>
+    <figure><img src="assets/details/quick-buckle.jpg" alt="Quick-release buckle"><figcaption>Side-release quick buckle</figcaption></figure>
+    <figure><img src="assets/details/strap-adjust.jpg" alt="Adjustable strap"><figcaption>Adjustable straps &amp; drawcord</figcaption></figure>
+    <figure><img src="assets/details/cuff.jpg" alt="Ribbed cuff"><figcaption>Ribbed elastic cuff</figcaption></figure>
+  </div>
+</section>
+
+<section id="sizing">
+  <h2>Size chart</h2>
+  <p class="sec-sub">Four sizes cover most breeds from ~7 kg to ~50 kg. Fit primarily by limb circumference + sleeve length; weight ranges are a reference guideline. Manual measurement, ±2–3 cm.</p>
+  <div class="tbl-wrap"><table>
+    <tr><th>Size</th><th>Sleeve Length</th><th>Limb Circumference</th><th>Cuff Opening</th><th>Suitable Weight</th></tr>
+    <tr><td><b>L</b></td><td>22 cm</td><td>20 cm</td><td>15 cm</td><td>7.5–11 kg / 16–24 lbs</td></tr>
+    <tr><td><b>XL</b></td><td>28 cm</td><td>26 cm</td><td>18 cm</td><td>10–20 kg / 22–44 lbs</td></tr>
+    <tr><td><b>2XL</b></td><td>33 cm</td><td>28 cm</td><td>22 cm</td><td>20–40 kg / 44–88 lbs</td></tr>
+    <tr><td><b>3XL</b></td><td>36 cm</td><td>32 cm</td><td>24 cm</td><td>40–50 kg / 88–110 lbs</td></tr>
+  </table></div>
+  <p class="note">Long version: +~5 cm sleeve length per size, no L size. Sizing consultation available — our size engine matches breed + weight + fabric stretch, and we're happy to advise your customer service team.</p>
+
+  <h2 style="margin-top:40px">Weights (per pair)</h2>
+  <div class="tbl-wrap"><table>
+    <tr><th>Type</th><th>Size</th><th>Pair Weight</th><th>With Poly Bag</th></tr>
+    <tr><td>Short</td><td>L</td><td>62 g</td><td>70 g</td></tr>
+    <tr><td>Short</td><td>XL</td><td>75 g</td><td>83 g</td></tr>
+    <tr><td>Short</td><td>2XL</td><td>92 g</td><td>100 g</td></tr>
+    <tr><td>Short</td><td>3XL</td><td>102 g</td><td>109 g</td></tr>
+    <tr><td>Long</td><td>XL</td><td>86 g</td><td>93 g</td></tr>
+    <tr><td>Long</td><td>2XL</td><td>106 g</td><td>114 g</td></tr>
+    <tr><td>Long</td><td>3XL</td><td>122 g</td><td>130 g</td></tr>
+  </table></div>
+  <p class="note">Reference weights, rounded; normal tolerance ±5–8% due to fabric lot and cutting variation. One pair per clear zip poly bag (39 × 28 cm, 7.7 g) — dropship-ready packaging.</p>
+</section>
+
+<section id="how">
+  <h2>How ordering works</h2>
+  <p class="sec-sub">A simple wholesale flow — you keep control of your own international shipping.</p>
+  <div class="steps">
+    <div class="step"><h3>Send an inquiry</h3><p>Email us the designs, sizes and quantities you're interested in (mixed designs/sizes are fine). Tell us your market and whether you need dropship packaging.</p></div>
+    <div class="step"><h3>Get a quotation</h3><p>We reply with a wholesale price list, production lead time, and current stock/supply status for each design.</p></div>
+    <div class="step"><h3>Confirm &amp; pay</h3><p>Confirm the order and pay by bank transfer (T/T). Payment details come with the quotation.</p></div>
+    <div class="step"><h3>Production &amp; QC</h3><p>Typical lead time is around 2–3 weeks depending on quantity — we run a partner factory line and an in-house studio line in parallel, and can part-ship sizes that finish early.</p></div>
+    <div class="step"><h3>Ship via your freight forwarder</h3><p>You arrange your own freight forwarder and send us the forwarder's warehouse address in China. We deliver the goods domestically with a packing list; your forwarder handles the international leg and customs.</p></div>
+  </div>
+  <div class="callout"><b>Why bring your own forwarder?</b> B2B buyers usually already have a preferred shipping channel and rates. Keeping the international leg on your side means no markup from us, full visibility for you, and the shipping method (air / sea / dedicated line) that fits your schedule. We support you with accurate weights, packing data and the documents your forwarder needs.</div>
+</section>
+
+<section class="faq">
+  <h2>FAQ</h2>
+  <p class="sec-sub"></p>
+  <details><summary>What is the minimum order quantity?</summary><p>We're small-batch friendly. Trial orders with mixed designs and sizes are welcome — tell us what you have in mind and we'll confirm feasibility and pricing by quantity tier.</p></details>
+  <details><summary>Can you do private label / OEM labeling?</summary><p>Yes. We can sew in your labels — label content and trademark authorization are provided by you as the brand owner. As the importer of record, regulatory responsibility for your market stays on the buyer side; we support with signed fiber-content declarations, "Made in China" origin, and care instructions.</p></details>
+  <details><summary>Do you provide product photos we can use?</summary><p>Yes — white-background photos, detail shots and model-worn shots for every design, watermark-free and free of Chinese text, ready for marketplace listings.</p></details>
+  <details><summary>Can you support dropshipping?</summary><p>Yes. Each pair is packed in its own clear zip poly bag with per-pair weights documented, so per-order fulfillment through your forwarder or warehouse is straightforward.</p></details>
+  <details><summary>Will a design I list stay available?</summary><p>We tell you upfront which designs are stable for restock and which are being phased out, so you never build a listing on a style we can't keep supplying.</p></details>
+  <details><summary>Which markets do you currently serve?</summary><p>We supply resellers in North America and are open to buyers in Europe and other regions. Products are designed for medium and large breeds.</p></details>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <h2>Request a price list</h2>
+    <p class="sec-sub" style="margin:8px auto 0">Tell us which designs and quantities you're interested in — we typically reply within 24 hours (GMT+8).</p>
+    <div class="email">shukeitei1@gmail.com</div>
+    <a class="btn" href="mailto:shukeitei1@gmail.com?subject=Wholesale%20Inquiry%20—%20Elbow%20Sleeves&body=Hi%2C%0A%0AI'm%20interested%20in%20your%20elbow%20protection%20sleeves.%0A%0ADesigns%3A%20%0ASizes%20%26%20quantities%3A%20%0ADestination%20market%3A%20%0ADropship%20packaging%20needed%3A%20yes%20%2F%20no%0A%0AThanks!">Email Us</a>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">TXZ Pet Wear · Functional dog wear studio, China · Wholesale &amp; dropshipping supply for overseas retailers</div>
+</footer>
+
+</body>
+</html>
