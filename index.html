@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TXZ Pet Wear — Functional Dog Wear · Wholesale &amp; Dropshipping</title>
 <meta name="description" content="Studio-made functional dog wear for medium & large breeds. Original-design elbow protection sleeves, cooling vests and winter wear. Wholesale & dropshipping supply for overseas retailers.">
+<link rel="canonical" href="https://shukeitei.github.io/txz-petwear/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TXZ Pet Wear — Functional Dog Wear · Wholesale & Dropshipping">
+<meta property="og:description" content="Original-design elbow protection sleeves, cooling wear and winter wear for medium & large breeds. Factory-direct wholesale supply for overseas retailers.">
+<meta property="og:url" content="https://shukeitei.github.io/txz-petwear/">
+<meta property="og:image" content="https://shukeitei.github.io/txz-petwear/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
   --ink:#2b2620; --sub:#6f6558; --line:#e8e1d6; --bg:#faf7f2; --card:#ffffff;
@@ -70,8 +78,17 @@ tr:last-child td{border-bottom:none}
 .contact-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;max-width:640px;margin:0 auto}
 .contact-box .email{font-size:20px;font-weight:800;margin:10px 0 18px;word-break:break-all}
 footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-size:13px;text-align:center}
-.coming{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.coming{display:grid;grid-template-columns:1fr;gap:16px}
 .coming .prop h3{color:var(--accent)}
+.lines-grid{display:flex;gap:18px;align-items:stretch}
+.lines-grid .coming{grid-auto-rows:1fr}
+.lines-grid .prop{display:flex;flex-direction:column;justify-content:center}
+@media(max-width:800px){.lines-grid{flex-direction:column}}
+.line-card{flex:1.2;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.line-card img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%}
+.line-card .line-meta{padding:16px 18px}
+.line-card h3{font-size:17px;color:var(--accent);margin-bottom:6px}
+.line-card p{font-size:14px;color:var(--sub)}
 </style>
 </head>
 <body>
@@ -139,13 +156,21 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
   <p class="note">Long version runs ~5 cm longer in the sleeve than Short at the same size; limb circumference, cuff opening and weight range are identical. Long starts at XL.</p>
 </section>
 
-<section>
+<section id="lines">
   <h2>More lines — catalog on request</h2>
-  <p class="sec-sub">Our studio also produces these functional lines. Ask for the current catalog and stock status.</p>
-  <div class="coming">
-    <div class="prop"><h3>Cooling Vests</h3><p>Ice-silk cooling fabric vests for hot-weather walks — lightweight and shipping-friendly.</p></div>
-    <div class="prop"><h3>Ice-Silk Bodysuits</h3><p>Four-leg cooling bodysuits for summer, sized for medium and large breeds.</p></div>
-    <div class="prop"><h3>Winter Elbow Wear &amp; Hoodies</h3><p>Padded winter elbow suits and hoodies for cold-climate markets.</p></div>
+  <p class="sec-sub">Our studio also produces these functional lines. Ask for the current catalog, spec sheets and stock status.</p>
+  <div class="lines-grid">
+    <div class="line-card">
+      <img src="assets/lines/cooling-suit.jpg" alt="Dog wearing an ice-silk cooling elbow suit">
+      <div class="line-meta">
+        <h3>Ice-Silk Cooling Suits</h3>
+        <p>Half-body and four-leg cooling suits in UV-protective ice-silk knit — front-leg coverage plus a cool-touch torso for hot-weather walks. Original prints, sized up to giant breeds.</p>
+      </div>
+    </div>
+    <div class="coming" style="flex:1">
+      <div class="prop"><h3>Cooling Vests</h3><p>Ice-silk cooling vests (UPF 50+ fabric) for hot-weather walks — lightweight and shipping-friendly. New generation in production now; photos available soon.</p></div>
+      <div class="prop"><h3>Winter Elbow Wear &amp; Hoodies</h3><p>Padded winter elbow suits and hoodies for cold-climate markets — same large-breed size system.</p></div>
+    </div>
   </div>
 </section>
 
