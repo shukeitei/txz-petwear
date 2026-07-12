@@ -89,6 +89,37 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
 .line-card .line-meta{padding:16px 18px}
 .line-card h3{font-size:17px;color:var(--accent);margin-bottom:6px}
 .line-card p{font-size:14px;color:var(--sub)}
+.card[data-slug]{cursor:pointer;transition:box-shadow .15s}
+.card[data-slug]:hover{box-shadow:0 6px 18px rgba(60,45,25,.12)}
+.view-hint{font-size:12px;color:var(--accent);font-weight:700;margin-top:6px}
+.tag.stable{background:#e8f1e9;color:var(--green)}
+dialog#lb{border:none;border-radius:16px;padding:0;max-width:880px;width:calc(100vw - 40px);max-height:90vh;overflow:auto;box-shadow:0 24px 64px rgba(0,0,0,.3)}
+dialog#lb::backdrop{background:rgba(40,32,24,.55)}
+.lb-body{display:grid;grid-template-columns:1.2fr 1fr}
+@media(max-width:700px){.lb-body{grid-template-columns:1fr}}
+.lb-imgs{background:#f4efe7;position:relative}
+.lb-main{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff}
+.lb-thumbs{display:flex;gap:8px;padding:10px;flex-wrap:wrap}
+.lb-thumbs img{width:56px;height:56px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid transparent}
+.lb-thumbs img.on{border-color:var(--accent)}
+.lb-cap{font-size:12px;color:var(--sub);padding:0 12px 10px}
+.lb-info{padding:22px 24px}
+.lb-info h3{font-size:20px}
+.lb-info .zh{color:var(--sub);font-size:13px;margin-bottom:12px}
+.lb-info dl{font-size:14px;margin:14px 0}
+.lb-info dt{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--sub);margin-top:10px}
+.lb-info dd{margin:2px 0 0}
+.lb-close{position:sticky;top:0;float:right;margin:10px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,.9);font-size:17px;cursor:pointer;z-index:2}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.measure-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:24px}
+@media(max-width:760px){.measure-wrap{grid-template-columns:1fr}}
+.measure-steps li{font-size:14px;color:var(--sub);margin:10px 0 10px 4px}
+.measure-steps b{color:var(--ink)}
+.giant-callout{background:#e9f0ea;border:1px solid #cfe0d2;border-radius:14px;padding:18px 22px;margin-top:22px;font-size:14px}
+.studio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:22px}
+.studio-grid figure{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.studio-grid img,.studio-grid video{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.studio-grid figcaption{padding:10px 12px;font-size:13px;color:var(--sub)}
 </style>
 </head>
 <body>
@@ -98,6 +129,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
     <div class="logo">TXZ <span>PET WEAR</span></div>
     <nav>
       <a href="#products">Products</a>
+      <a href="#odm">Custom</a>
       <a href="#materials">Materials</a>
       <a href="#sizing">Sizing</a>
       <a href="#how">How to Order</a>
@@ -137,23 +169,30 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
 <section id="products">
   <h2>Elbow Protection Sleeves</h2>
   <p class="sec-sub">Front-leg elbow sleeves for dogs — padded, breathable, machine-position adjustable. 14 designs (12 short + 2 long), sizes L–3XL covering roughly 7–50 kg. Sold and packed by the pair.</p>
-  <div class="grid">
-    <div class="card"><img src="assets/products/street-leopard.jpg" alt="Street Leopard elbow sleeve"><div class="meta"><div class="name">Street Leopard</div><div class="zh">潮豹 · Chao Bao</div><div class="tags"><span class="tag">Short</span></div></div></div>
-    <div class="card"><img src="assets/products/street-leopard-long.jpg" alt="Street Leopard long elbow sleeve"><div class="meta"><div class="name">Street Leopard</div><div class="zh">潮豹 · Chao Bao</div><div class="tags"><span class="tag long">Long</span></div></div></div>
-    <div class="card"><img src="assets/products/folk-duck.jpg" alt="Folk-Art Duck elbow sleeve"><div class="meta"><div class="name">Folk-Art Duck</div><div class="zh">年画鸭 · Nianhua Ya</div><div class="tags"><span class="tag">Short</span></div></div></div>
-    <div class="card"><img src="assets/products/folk-duck-long.jpg" alt="Folk-Art Duck long elbow sleeve"><div class="meta"><div class="name">Folk-Art Duck</div><div class="zh">年画鸭 · Nianhua Ya</div><div class="tags"><span class="tag long">Long</span></div></div></div>
-    <div class="card"><img src="assets/products/ice-leopard.jpg" alt="Ice Leopard elbow sleeve"><div class="meta"><div class="name">Ice Leopard</div><div class="zh">冷豹力 · Leng Bao Li</div><div class="tags"><span class="tag">Short</span></div></div></div>
-    <div class="card"><img src="assets/products/goose-chase.jpg" alt="Goose Chase elbow sleeve"><div class="meta"><div class="name">Goose Chase</div><div class="zh">抓大鹅 · Zhua Da E</div><div class="tags"><span class="tag">Short</span></div></div></div>
-    <div class="card"><img src="assets/products/lazy-fish.jpg" alt="Lazy Fish elbow sleeve"><div class="meta"><div class="name">Lazy Fish</div><div class="zh">摸个鱼 · Mo Ge Yu</div><div class="tags"><span class="tag">Short</span></div></div></div>
-    <div class="card"><img src="assets/products/happy-bunny.jpg" alt="Happy Bunny elbow sleeve"><div class="meta"><div class="name">Happy Bunny</div><div class="zh">兔个乐 · Tu Ge Le</div><div class="tags"><span class="tag">Short</span></div></div></div>
-    <div class="card"><img src="assets/products/snowman.jpg" alt="Snowman elbow sleeve"><div class="meta"><div class="name">Snowman</div><div class="zh">雪人精 · Xue Ren Jing</div><div class="tags"><span class="tag">Short</span></div></div></div>
-    <div class="card"><img src="assets/products/stocking.jpg" alt="Christmas Stocking elbow sleeve"><div class="meta"><div class="name">Christmas Stocking</div><div class="zh">装满袜 · Zhuang Man Wa</div><div class="tags"><span class="tag">Short</span><span class="tag xmas">Christmas</span></div></div></div>
-    <div class="card"><img src="assets/products/peace-fox.jpg" alt="Peace Fox elbow sleeve"><div class="meta"><div class="name">Peace Fox</div><div class="zh">平安狐 · Ping'an Hu</div><div class="tags"><span class="tag">Short</span><span class="tag xmas">Christmas</span></div></div></div>
-    <div class="card"><img src="assets/products/peace-deer.jpg" alt="Peace Deer elbow sleeve"><div class="meta"><div class="name">Peace Deer</div><div class="zh">平安鹿 · Ping'an Lu</div><div class="tags"><span class="tag">Short</span><span class="tag xmas">Christmas</span></div></div></div>
-    <div class="card"><img src="assets/products/lucky-koi.jpg" alt="Lucky Koi elbow sleeve"><div class="meta"><div class="name">Lucky Koi</div><div class="zh">锦鲤 · Jin Li</div><div class="tags"><span class="tag">Short</span><span class="tag cny">Lunar New Year</span></div></div></div>
-    <div class="card"><img src="assets/products/fortune-deer.jpg" alt="Fortune Deer elbow sleeve"><div class="meta"><div class="name">Fortune Deer</div><div class="zh">福鹿 · Fu Lu</div><div class="tags"><span class="tag">Short</span><span class="tag cny">Lunar New Year</span></div></div></div>
+  <div class="grid" id="design-grid"></div>
+  <p class="note">Long version runs ~5 cm longer in the sleeve than Short at the same size; limb circumference, cuff opening and weight range are identical. Long starts at XL. <b>Click any design for photos, sizes and supply status.</b></p>
+</section>
+
+<section id="why">
+  <h2>Why elbow protection sells</h2>
+  <p class="sec-sub">A physical barrier for the front legs — the use cases your customers are already searching for. (Protective garments, not medical devices.)</p>
+  <div class="why-grid">
+    <div class="prop"><h3>🛡️ Elbow &amp; skin protection</h3><p>Large, heavy dogs rest their elbows on hard floors all day. A padded sleeve puts a soft, breathable layer between elbow and ground — exactly where coats wear thin and skin gets rough.</p></div>
+    <div class="prop"><h3>🚫 Lick &amp; chew barrier</h3><p>A comfortable alternative to the plastic cone for dogs that won't leave a front-leg spot alone — soft coverage the dog forgets about, instead of a collar it fights.</p></div>
+    <div class="prop"><h3>🧼 Keeps wounds-adjacent areas clean</h3><p>After grooming, minor scrapes or vet visits, owners want the front leg covered and clean on walks. Breathable cotton with a cooling-silk contact layer works in warm weather too.</p></div>
+    <div class="prop"><h3>📈 An under-served niche</h3><p>Most overseas front-leg protection tops out at medium sizes and clinical looks. Original prints + true large-breed sizing is a listing that stands out instead of competing on price.</p></div>
   </div>
-  <p class="note">Long version runs ~5 cm longer in the sleeve than Short at the same size; limb circumference, cuff opening and weight range are identical. Long starts at XL.</p>
+</section>
+
+<section id="odm">
+  <h2>Custom &amp; ODM</h2>
+  <p class="sec-sub">We're a design studio with our own production — customization is our home turf, not an exception.</p>
+  <div class="props">
+    <div class="prop"><h3>🖌️ Custom prints</h3><p>Bring your artwork or theme — we handle print engineering, sampling and production on the same garment construction.</p></div>
+    <div class="prop"><h3>🏷️ Private label</h3><p>Your sewn-in labels and packaging. Label content and trademark authorization from you; signed fiber-content declarations and origin marking from us.</p></div>
+    <div class="prop"><h3>🐻 Giant sizes to order</h3><p>A graded 4XL pattern (beyond our stocked 3XL, for dogs over ~50 kg / 110 lbs) is ready — we produce it made-to-order for wholesale quantities. Great Pyrenees-class dogs are covered.</p></div>
+    <div class="prop"><h3>⚡ Small-batch quick-turn</h3><p>Sampling and trial runs without big-factory minimums — validate a design in your market before committing to volume.</p></div>
+  </div>
 </section>
 
 <section id="lines">
@@ -207,6 +246,45 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
   </table></div>
   <p class="note">Long version: +~5 cm sleeve length per size, no L size. Sizing consultation available — our size engine matches breed + weight + fabric stretch, and we're happy to advise your customer service team.</p>
 
+  <div class="measure-wrap">
+    <svg viewBox="0 0 340 300" role="img" aria-label="Measurement guide diagram" style="max-width:340px;margin:0 auto">
+      <defs>
+        <marker id="ah" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#b4551f"/></marker>
+      </defs>
+      <!-- sleeve body -->
+      <path d="M120 40 Q112 30 128 24 L196 24 Q212 30 204 40 L198 200 Q198 216 186 218 L138 218 Q126 216 126 200 Z" fill="#f6e8dd" stroke="#b4551f" stroke-width="2.5"/>
+      <!-- cuff -->
+      <rect x="126" y="218" width="72" height="34" rx="8" fill="#fff" stroke="#b4551f" stroke-width="2.5"/>
+      <line x1="138" y1="224" x2="138" y2="246" stroke="#e0b89e" stroke-width="2"/>
+      <line x1="152" y1="224" x2="152" y2="246" stroke="#e0b89e" stroke-width="2"/>
+      <line x1="166" y1="224" x2="166" y2="246" stroke="#e0b89e" stroke-width="2"/>
+      <line x1="180" y1="224" x2="180" y2="246" stroke="#e0b89e" stroke-width="2"/>
+      <!-- strap -->
+      <path d="M128 26 Q90 60 96 110" fill="none" stroke="#3d6b4f" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 9"/>
+      <!-- A: sleeve length -->
+      <line x1="248" y1="28" x2="248" y2="250" stroke="#b4551f" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+      <text x="258" y="140" font-size="15" font-weight="700" fill="#b4551f">A</text>
+      <!-- B: limb circumference -->
+      <ellipse cx="163" cy="110" rx="42" ry="12" fill="none" stroke="#b4551f" stroke-width="2" stroke-dasharray="5 4"/>
+      <text x="60" y="116" font-size="15" font-weight="700" fill="#b4551f">B</text>
+      <!-- C: cuff opening -->
+      <ellipse cx="162" cy="252" rx="38" ry="10" fill="none" stroke="#b4551f" stroke-width="2" stroke-dasharray="5 4"/>
+      <text x="60" y="258" font-size="15" font-weight="700" fill="#b4551f">C</text>
+      <text x="20" y="290" font-size="12" fill="#6f6558">A Sleeve Length · B Limb Circumference · C Cuff Opening</text>
+    </svg>
+    <div>
+      <h3 style="margin-bottom:6px">How to measure</h3>
+      <ol class="measure-steps">
+        <li><b>A · Sleeve Length</b> — from the top of the shoulder down along the front leg to where you want the cuff to sit.</li>
+        <li><b>B · Limb Circumference</b> — around the thickest part of the front leg (usually just below the elbow). This is the primary fit measurement.</li>
+        <li><b>C · Cuff Opening</b> — around the leg where the cuff will sit; the ribbed cuff stretches, so match or slightly exceed this.</li>
+      </ol>
+      <p class="note">Fit by B + A first; body weight is a secondary reference. When in doubt between two sizes for a fluffy or muscular dog, we'll advise — send us breed + weight + these two measurements.</p>
+    </div>
+  </div>
+
+  <div class="giant-callout"><b>🐻 Over 50 kg / 110 lbs? We've got giant breeds covered.</b> Our stocked range tops out at 3XL (~50 kg). For Great Pyrenees, Newfoundlands, Saint Bernards and similar giants, a fully graded <b>4XL pattern is ready to produce</b> — we simply don't stock it because demand is niche. For wholesale orders of sufficient quantity we produce 4XL made-to-order in any design. Ask us when you inquire.</div>
+
   <h2 style="margin-top:40px">Weights (per pair)</h2>
   <div class="tbl-wrap"><table>
     <tr><th>Type</th><th>Size</th><th>Pair Weight</th><th>With Poly Bag</th></tr>
@@ -219,6 +297,19 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
     <tr><td>Long</td><td>3XL</td><td>122 g</td><td>130 g</td></tr>
   </table></div>
   <p class="note">Reference weights, rounded; normal tolerance ±5–8% due to fabric lot and cutting variation. One pair per clear zip poly bag (39 × 28 cm, 7.7 g) — dropship-ready packaging.</p>
+</section>
+
+<section id="studio">
+  <h2>Studio &amp; production</h2>
+  <p class="sec-sub">Designed, sampled and produced by us — a partner factory line for volume plus an in-house studio line for speed and small batches.</p>
+  <div class="studio-grid">
+    <figure>
+      <video src="assets/elbow-sleeve.mp4" poster="assets/video-poster.jpg" muted loop playsinline controls preload="metadata"></video>
+      <figcaption>The sleeve on a moving dog — padding stays over the elbow through the full stride</figcaption>
+    </figure>
+    <figure><img src="assets/gallery/pack-pair.jpg" alt="Pair packed in barcode poly bag" loading="lazy"><figcaption>One pair per zip poly bag, barcode-ready for marketplace intake</figcaption></figure>
+    <figure><img src="assets/gallery/pack-weighed.jpg" alt="Packed pair on the scale" loading="lazy"><figcaption>Every size weighed and documented — the numbers your forwarder gets are real</figcaption></figure>
+  </div>
 </section>
 
 <section id="how">
@@ -243,6 +334,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
   <details><summary>Can you support dropshipping?</summary><p>Yes. Each pair is packed in its own clear zip poly bag with per-pair weights documented, so per-order fulfillment through your forwarder or warehouse is straightforward.</p></details>
   <details><summary>Will a design I list stay available?</summary><p>We tell you upfront which designs are stable for restock and which are being phased out, so you never build a listing on a style we can't keep supplying.</p></details>
   <details><summary>Which markets do you currently serve?</summary><p>We supply resellers in North America and are open to buyers in Europe and other regions. Products are designed for medium and large breeds.</p></details>
+  <details><summary>Can I order samples first?</summary><p>Yes — sample orders before a wholesale commitment are welcome. Tell us the designs and sizes; we'll quote sample pricing and get them to your forwarder or courier them directly.</p></details>
+  <details><summary>My market has dogs over 110 lbs — do you go beyond 3XL?</summary><p>Yes, by arrangement. A graded 4XL pattern is ready for every design; we produce it made-to-order for wholesale quantities instead of stocking it. Mention it in your inquiry and we'll confirm the quantity threshold.</p></details>
+  <details><summary>Can you make our own prints or designs?</summary><p>Yes — custom prints on the same construction are our specialty as a design studio. Send artwork or even just a theme; we handle print engineering and sampling. Small trial runs are fine.</p></details>
+  <details><summary>What are the plush charms in the holiday photos?</summary><p>Matching holiday plush charm accessories (Christmas and Lunar New Year sets) that clip onto the sleeves — available as an add-on line for seasonal listings. Ask for the accessory catalog.</p></details>
 </section>
 
 <section id="contact">
@@ -259,6 +354,109 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
 <footer>
   <div class="wrap">TXZ Pet Wear · Functional dog wear studio, China · Wholesale &amp; dropshipping supply for overseas retailers</div>
 </footer>
+
+<dialog id="lb">
+  <button class="lb-close" onclick="document.getElementById('lb').close()" aria-label="Close">✕</button>
+  <div class="lb-body">
+    <div class="lb-imgs">
+      <img class="lb-main" id="lb-main" src="" alt="">
+      <div class="lb-cap" id="lb-cap"></div>
+      <div class="lb-thumbs" id="lb-thumbs"></div>
+    </div>
+    <div class="lb-info">
+      <h3 id="lb-name"></h3>
+      <div class="zh" id="lb-zh"></div>
+      <div class="tags" id="lb-tags"></div>
+      <dl>
+        <dt>Sizes</dt><dd id="lb-sizes"></dd>
+        <dt>Supply status</dt><dd id="lb-status"></dd>
+        <dt>Materials</dt><dd>100% cotton printed double-knit shell · dual-layer cooling-silk + 3D mesh pad · quick buckle (<a href="#materials" onclick="document.getElementById('lb').close()">full spec</a>)</dd>
+        <dt>Packing</dt><dd>Per pair in zip poly bag, 62–130 g per pair by size</dd>
+      </dl>
+      <a class="btn" id="lb-quote" href="#">Request quote for this design</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const SHARED = [
+  {src:'assets/details/pad-lining.jpg', cap:'Dual-layer pad lining (all designs)'},
+  {src:'assets/details/quick-buckle.jpg', cap:'Side-release quick buckle (all designs)'}
+];
+const DESIGNS = [
+  {slug:'street-leopard', name:'Street Leopard', zh:'潮豹 · Chao Bao', type:'Short', season:null,
+   imgs:[{src:'assets/gallery/worn-street-leopard-1.jpg',cap:'Worn — shown in Long version; Short differs only in sleeve length'},{src:'assets/gallery/worn-street-leopard-2.jpg',cap:'Coverage through the full stride'}]},
+  {slug:'street-leopard-long', name:'Street Leopard', zh:'潮豹 · Chao Bao', type:'Long', season:null,
+   imgs:[{src:'assets/gallery/worn-street-leopard-1.jpg',cap:'Worn — Long version'},{src:'assets/gallery/worn-street-leopard-2.jpg',cap:'Coverage through the full stride'}]},
+  {slug:'folk-duck', name:'Folk-Art Duck', zh:'年画鸭 · Nianhua Ya', type:'Short', season:null,
+   imgs:[{src:'assets/gallery/worn-folk-duck-1.jpg',cap:'Worn'},{src:'assets/gallery/worn-folk-duck-2.jpg',cap:'Worn — standing'}]},
+  {slug:'folk-duck-long', name:'Folk-Art Duck', zh:'年画鸭 · Nianhua Ya', type:'Long', season:null,
+   imgs:[{src:'assets/gallery/worn-folk-duck-1.jpg',cap:'Worn — shown in Short version; Long runs ~5 cm longer'},{src:'assets/gallery/worn-folk-duck-2.jpg',cap:'Worn — standing'}]},
+  {slug:'ice-leopard', name:'Ice Leopard', zh:'冷豹力 · Leng Bao Li', type:'Short', season:null, imgs:[]},
+  {slug:'goose-chase', name:'Goose Chase', zh:'抓大鹅 · Zhua Da E', type:'Short', season:null, imgs:[]},
+  {slug:'lazy-fish', name:'Lazy Fish', zh:'摸个鱼 · Mo Ge Yu', type:'Short', season:null, imgs:[]},
+  {slug:'happy-bunny', name:'Happy Bunny', zh:'兔个乐 · Tu Ge Le', type:'Short', season:null, imgs:[]},
+  {slug:'snowman', name:'Snowman', zh:'雪人精 · Xue Ren Jing', type:'Short', season:null, imgs:[]},
+  {slug:'stocking', name:'Christmas Stocking', zh:'装满袜 · Zhuang Man Wa', type:'Short', season:'xmas',
+   imgs:[{src:'assets/gallery/scene-xmas-1.jpg',cap:'Christmas set styled with plush charm accessories'},{src:'assets/gallery/scene-xmas-2.jpg',cap:'Christmas scene'},{src:'assets/gallery/scene-xmas-3.jpg',cap:'Christmas scene'}]},
+  {slug:'peace-fox', name:'Peace Fox', zh:'平安狐 · Ping’an Hu', type:'Short', season:'xmas',
+   imgs:[{src:'assets/gallery/scene-xmas-1.jpg',cap:'Christmas set styled with plush charm accessories'},{src:'assets/gallery/scene-xmas-2.jpg',cap:'Christmas scene'}]},
+  {slug:'peace-deer', name:'Peace Deer', zh:'平安鹿 · Ping’an Lu', type:'Short', season:'xmas',
+   imgs:[{src:'assets/gallery/scene-xmas-1.jpg',cap:'Christmas set styled with plush charm accessories'},{src:'assets/gallery/scene-xmas-3.jpg',cap:'Christmas scene'}]},
+  {slug:'lucky-koi', name:'Lucky Koi', zh:'锦鲤 · Jin Li', type:'Short', season:'cny',
+   imgs:[{src:'assets/gallery/scene-cny-1.jpg',cap:'Lunar New Year set styled with plush charm accessories'},{src:'assets/gallery/scene-cny-2.jpg',cap:'Lunar New Year scene'}]},
+  {slug:'fortune-deer', name:'Fortune Deer', zh:'福鹿 · Fu Lu', type:'Short', season:'cny',
+   imgs:[{src:'assets/gallery/scene-cny-1.jpg',cap:'Lunar New Year set styled with plush charm accessories'},{src:'assets/gallery/scene-cny-2.jpg',cap:'Lunar New Year scene'}]}
+];
+const SEASON_LABEL = {xmas:'Christmas', cny:'Lunar New Year'};
+const grid = document.getElementById('design-grid');
+grid.innerHTML = DESIGNS.map(d => `
+  <div class="card" data-slug="${d.slug}">
+    <img src="assets/products/${d.slug}.jpg" alt="${d.name} elbow sleeve" loading="lazy">
+    <div class="meta">
+      <div class="name">${d.name}</div>
+      <div class="zh">${d.zh}</div>
+      <div class="tags">
+        <span class="tag ${d.type==='Long'?'long':''}">${d.type}</span>
+        ${d.season?`<span class="tag ${d.season}">${SEASON_LABEL[d.season]}</span>`:''}
+        <span class="tag stable">Stable restock</span>
+      </div>
+      <div class="view-hint">View details →</div>
+    </div>
+  </div>`).join('');
+
+const lb = document.getElementById('lb');
+function openDesign(slug){
+  const d = DESIGNS.find(x=>x.slug===slug);
+  const imgs = [{src:`assets/products/${d.slug}.jpg`,cap:'White-background product photo (listing-ready)'}, ...d.imgs, ...SHARED];
+  document.getElementById('lb-name').textContent = `${d.name} — ${d.type}`;
+  document.getElementById('lb-zh').textContent = d.zh;
+  document.getElementById('lb-tags').innerHTML =
+    `<span class="tag ${d.type==='Long'?'long':''}">${d.type}</span>`+
+    (d.season?`<span class="tag ${d.season}">${SEASON_LABEL[d.season]}</span>`:'')+
+    `<span class="tag stable">Stable restock</span>`;
+  document.getElementById('lb-sizes').textContent = d.type==='Long' ? 'XL / 2XL / 3XL (custom 4XL by arrangement)' : 'L / XL / 2XL / 3XL (custom 4XL by arrangement)';
+  document.getElementById('lb-status').textContent = 'Stable — safe to build listings on; we flag phase-outs in advance';
+  document.getElementById('lb-quote').href = `mailto:shukeitei1@gmail.com?subject=${encodeURIComponent('Quote request — '+d.name+' ('+d.type+') elbow sleeves')}`;
+  const thumbs = document.getElementById('lb-thumbs');
+  thumbs.innerHTML = imgs.map((im,i)=>`<img src="${im.src}" data-i="${i}" class="${i===0?'on':''}" alt="">`).join('');
+  const show = i => {
+    document.getElementById('lb-main').src = imgs[i].src;
+    document.getElementById('lb-cap').textContent = imgs[i].cap || '';
+    thumbs.querySelectorAll('img').forEach((t,j)=>t.classList.toggle('on', j===i));
+  };
+  thumbs.querySelectorAll('img').forEach(t=>t.onclick=()=>show(+t.dataset.i));
+  show(0);
+  lb.showModal();
+}
+grid.addEventListener('click', e => {
+  const card = e.target.closest('.card[data-slug]');
+  if(card) openDesign(card.dataset.slug);
+});
+lb.addEventListener('click', e => { if(e.target===lb) lb.close(); });
+const deep = new URLSearchParams(location.search).get('d');
+if(deep && DESIGNS.some(x=>x.slug===deep)) openDesign(deep);
+</script>
 
 </body>
 </html>
