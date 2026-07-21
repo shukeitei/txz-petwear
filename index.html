@@ -458,7 +458,10 @@ const SUIT_FAMILY = {
 };
 const SUIT_SHARED_ICE = [
   {src:'assets/suits/detail-suit-pad-1.jpg', cap:'Pad stack: cooling-silk contact layer + 3D sandwich mesh (all ice-silk suits)'},
-  {src:'assets/suits/detail-suit-pad-2.jpg', cap:'Elbow pad sewn into the sleeve, inside view (all ice-silk suits)'}
+  {src:'assets/suits/elbow-pad-icesilk.jpg', cap:'Elbow pad sewn into the sleeve, inside view (all ice-silk suits)'}
+];
+const SUIT_SHARED_HOODIE = [
+  {src:'assets/suits/elbow-pad-hoodie.jpg', cap:'Cooling-mesh elbow pad sewn into the sleeve, inside view (all hoodie suits)'}
 ];
 const SUITS = [
   {slug:'grow-wild', name:'Grow Wild', zh:'随便长 · Suibian Zhang', family:'ice', season:null,
@@ -474,7 +477,7 @@ const SUITS = [
   {slug:'lazy-duck', name:'Lazy Duck', zh:'摆烂鸭 · Bailan Ya', family:'hoodie', season:null,
    imgs:[{src:'assets/suits/worn-lazy-duck-1.jpg',cap:'Worn — standing'},{src:'assets/suits/worn-lazy-duck-2.jpg',cap:'Worn — sitting, side print'},{src:'assets/suits/worn-lazy-duck-3.jpg',cap:'Worn — front sitting'},{src:'assets/suits/detail-lazy-duck-1.jpg',cap:'Cooling-mesh elbow pad sewn into the sleeve, inside view'},{src:'assets/suits/detail-lazy-duck-2.jpg',cap:'Ribbed collar and cuff detail'}]},
   {slug:'couch-pony', name:'Couch Pony', zh:'躺平马 · Tangping Ma', family:'hoodie', season:null,
-   imgs:[{src:'assets/suits/worn-couch-pony-1.jpg',cap:'Worn — front sitting'},{src:'assets/suits/worn-couch-pony-2.jpg',cap:'Worn — side standing'},{src:'assets/suits/worn-hoodie-duo.jpg',cap:'With Lazy Duck — same hoodie line'},{src:'assets/suits/detail-couch-pony-1.jpg',cap:'Elbow pad panel seam, outside view'},{src:'assets/suits/detail-couch-pony-2.jpg',cap:'Ribbed collar detail'}]},
+   imgs:[{src:'assets/suits/worn-couch-pony-1.jpg',cap:'Worn — front sitting'},{src:'assets/suits/worn-couch-pony-2.jpg',cap:'Worn — side standing'},{src:'assets/suits/worn-hoodie-duo.jpg',cap:'With Lazy Duck — same hoodie line'},{src:'assets/suits/detail-couch-pony-1.jpg',cap:'Sleeve print, outside view'}]},
   {slug:'fortune-deer-hoodie', name:'Fortune Deer — Gold Trim', zh:'福鹿金边 · Fulu Jinbian', family:'hoodie', season:'cny',
    imgs:[{src:'assets/suits/worn-fortune-deer-1.jpg',cap:'Worn — lying down, studio Lunar New Year set'},{src:'assets/suits/worn-fortune-deer-2.jpg',cap:'Worn — standing, full body'},{src:'assets/suits/worn-cny-duo.jpg',cap:'With Lucky Koi — both New-Year hoodies together'},{src:'assets/suits/detail-fortune-deer-1.jpg',cap:'Print, gold piping and ribbed cuff detail'}]},
   {slug:'lucky-koi-hoodie', name:'Lucky Koi', zh:'锦鲤 · Jin Li', family:'hoodie', season:'cny',
@@ -544,7 +547,7 @@ function openDesign(slug){
   if(suit){
     const fam = SUIT_FAMILY[d.family];
     const isVest = d.family==='vest';
-    imgs = [{src: d.card || `assets/suits/${d.slug}.jpg`, cap: d.cardCap || 'White-background product photo (listing-ready)'}, ...d.imgs, ...(d.family==='ice' ? SUIT_SHARED_ICE : isVest ? VEST_SHARED : [])];
+    imgs = [{src: d.card || `assets/suits/${d.slug}.jpg`, cap: d.cardCap || 'White-background product photo (listing-ready)'}, ...d.imgs, ...(d.family==='ice' ? SUIT_SHARED_ICE : d.family==='hoodie' ? SUIT_SHARED_HOODIE : isVest ? VEST_SHARED : [])];
     tagsHtml = `<span class="tag ${fam.cls}">${fam.label}</span>`+
       (isVest?'<span class="tag">Gen-3</span>':'')+
       (d.season?`<span class="tag ${d.season}">${SEASON_LABEL[d.season]}</span>`:'');
