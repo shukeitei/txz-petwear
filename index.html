@@ -92,6 +92,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--sub);font-siz
 .line-card .line-meta{padding:16px 18px}
 .line-card h3{font-size:17px;color:var(--accent);margin-bottom:6px}
 .line-card p{font-size:14px;color:var(--sub)}
+.fit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.fit-grid figure{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.fit-grid img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.fit-grid figcaption{padding:7px 10px;font-size:12px;color:var(--sub)}
 .card[data-slug]{cursor:pointer;transition:box-shadow .15s}
 .card[data-slug]:hover{box-shadow:0 6px 18px rgba(60,45,25,.12)}
 .view-hint{font-size:12px;color:var(--accent);font-weight:700;margin-top:6px}
@@ -134,6 +138,7 @@ dialog#lb::backdrop{background:rgba(40,32,24,.55)}
       <a href="#products">Sleeves</a>
       <a href="#suits">Suits</a>
       <a href="#vests">Vests</a>
+      <a href="#ondogs">On Dogs</a>
       <a href="#odm">Custom</a>
       <a href="#materials">Materials</a>
       <a href="#sizing">Sizing</a>
@@ -190,6 +195,26 @@ dialog#lb::backdrop{background:rgba(40,32,24,.55)}
   <p class="sec-sub">Gen-3 raglan-shoulder cooling vest in UPF-rated ice-silk knit — a light cool-touch layer for hot-weather walks, with a tummy-cinch elastic hem that keeps it in place. Two colorways, seven sizes (3XL–9XL) covering roughly 8–50 kg. Lightweight and shipping-friendly.</p>
   <div class="grid" id="vest-grid"></div>
   <p class="note">Vests use their own size chart — see <a href="#vests-sizing">cooling vest size chart</a> below. <b>Click a colorway for photos and details.</b></p>
+</section>
+
+<section id="ondogs">
+  <h2>On Real Dogs</h2>
+  <p class="sec-sub">Unretouched photos from real buyers of our domestic store — proof of fit across breeds and sizes, from Border Collies to a Samoyed in 7XL. Size shown where the buyer's order data was available.</p>
+  <div class="fit-grid">
+    <figure><img src="assets/gallery/fit-golden-ice-leopard.jpg" alt="Golden Retriever wearing Ice Leopard elbow sleeves" loading="lazy"><figcaption>Golden Retriever · Ice Leopard sleeves</figcaption></figure>
+    <figure><img src="assets/gallery/fit-malamute-snowman.jpg" alt="Alaskan Malamute wearing Snowman elbow sleeves" loading="lazy"><figcaption>Alaskan Malamute · Snowman sleeves</figcaption></figure>
+    <figure><img src="assets/gallery/fit-bernese-sleeves.jpg" alt="Bernese Mountain Dog wearing elbow sleeves" loading="lazy"><figcaption>Bernese Mountain Dog · elbow sleeves</figcaption></figure>
+    <figure><img src="assets/gallery/fit-husky-stocking.jpg" alt="Siberian Husky wearing Christmas Stocking elbow sleeves" loading="lazy"><figcaption>Siberian Husky · Christmas Stocking sleeves</figcaption></figure>
+    <figure><img src="assets/gallery/fit-tricolor-collie-sleeves.jpg" alt="Tricolor Border Collie wearing elbow sleeves" loading="lazy"><figcaption>Border Collie · elbow sleeves</figcaption></figure>
+    <figure><img src="assets/gallery/fit-akita-peace-fox.jpg" alt="Akita wearing Peace Fox elbow sleeves" loading="lazy"><figcaption>Akita · Peace Fox sleeves</figcaption></figure>
+    <figure><img src="assets/gallery/fit-chow-fortune-deer.jpg" alt="Chow mix wearing Fortune Deer elbow sleeves, size XL" loading="lazy"><figcaption>Chow mix · Fortune Deer sleeves · XL</figcaption></figure>
+    <figure><img src="assets/gallery/fit-mixed-fortune-deer.jpg" alt="Mixed-breed dog wearing Fortune Deer elbow sleeves, size XL" loading="lazy"><figcaption>Mixed breed · Fortune Deer sleeves · XL</figcaption></figure>
+    <figure><img src="assets/gallery/fit-collie-lucky-koi.jpg" alt="Border Collie wearing Lucky Koi elbow sleeves, size XL" loading="lazy"><figcaption>Border Collie · Lucky Koi sleeves · XL</figcaption></figure>
+    <figure><img src="assets/gallery/fit-labrador-ruffle.jpg" alt="Labrador wearing ruffle-cuff elbow sleeves, size 3XL" loading="lazy"><figcaption>Labrador · ruffle-cuff sleeves · 3XL</figcaption></figure>
+    <figure><img src="assets/gallery/fit-samoyed-breezy-elephant-7xl.jpg" alt="Samoyed wearing Breezy Elephant elbow suit, size 7XL" loading="lazy"><figcaption>Samoyed · Breezy Elephant suit · 7XL</figcaption></figure>
+    <figure><img src="assets/gallery/fit-shiba-slow-beat-8xl.jpg" alt="Shiba mix wearing Slow Beat elbow suit, size 8XL" loading="lazy"><figcaption>Shiba mix · Slow Beat suit · 8XL</figcaption></figure>
+  </div>
+  <p class="note">Some prints shown are past-season designs — current catalog and stock list on request.</p>
 </section>
 
 <section id="why">
